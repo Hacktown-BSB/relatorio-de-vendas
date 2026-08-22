@@ -1,0 +1,8 @@
+{
+  "name": "relatorio-de-vendas",
+  "version": "1.2.0",
+  "description": "Geracao e exportacao de relatorios de vendas em PDF",
+  "main": "index.js",
+  "scripts": { "start": "node index.js" },
+  "dependencies": { "express": "^4.19.2", "pdfkit": "^0.15.0" }
+}
