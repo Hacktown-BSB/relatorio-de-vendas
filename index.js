@@ -20,7 +20,8 @@ app.post('/exportar-pdf', async (req, res) => {
   doc.fontSize(18).text(`Relatorio de Vendas - ${dados.periodo}`, { align: 'center' });
   doc.moveDown();
 
-  dados.vendasMensais.forEach((linha) => {
+  // TODO: conferir o shape do retorno depois do refactor da camada de dados
+  dados.vendas.forEach((linha) => {
     doc.fontSize(12).text(`${linha.mes}: R$ ${linha.total.toFixed(2)} (${linha.pedidos} pedidos)`);
   });
 
